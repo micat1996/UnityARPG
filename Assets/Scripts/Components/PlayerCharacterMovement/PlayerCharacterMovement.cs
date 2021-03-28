@@ -129,7 +129,7 @@ public sealed class PlayerCharacterMovement : MonoBehaviour
 
     private void Awake()
     {
-//        _PlayerCharacter = GetComponent<PlayerCharacter>();
+        _PlayerCharacter = GetComponent<PlayerableCharacter>();
         characterController = GetComponent<CharacterController>();
     }
 
@@ -144,17 +144,26 @@ public sealed class PlayerCharacterMovement : MonoBehaviour
         // 이동 입력 값을 초기화합니다.
         _InputVector = Vector3.zero;
 
+        Vector3 input = new Vector3();
+        input.x = InputManager.GetAxis("Horizontal");
+        input.z = InputManager.GetAxis("Vertical");
+
+        Debug.Log("input = " + input);
+
+        //if (input != Vector3.zero) input.Normalize();
+
         // 이동 입력 값을 저장합니다.
-//        _InputVector.x = _PlayerCharacter.playerAttack.isRegularAttacking ? 0.0f : InputManager.Instance.gameInputHorizontal;
-//        _InputVector.z = _PlayerCharacter.playerAttack.isRegularAttacking ? 0.0f : InputManager.Instance.gameInputVertical;
+        _InputVector.x = input.x;
+        _InputVector.z = input.z;
+
 
         // 이동 입력 값을 카메라 방향으로 변환합니다.
-//        _InputVector = _PlayerCharacter.springArm.InputToCameraDirection(_InputVector);
+        _InputVector = _PlayerCharacter.springArm.InputToCameraDirection(_InputVector);
 
         // 점프 입력 처리를 합니다.
-//        if (InputManager.Instance.gameInputJumpKey)
-//            JumpInput();
-//        else FinishJumpInput();
+        if (InputManager.GetAction("Jump", UnityStartUpFramework.Enums.ActionInput.Stay))
+            JumpInput();
+        else FinishJumpInput();
 
         // 속도를 계산합니다.
         CalculateSpeed();
