@@ -43,9 +43,10 @@ MonoBehaviour:
   m_Script: {fileID: -1783453183, guid: 32e1a5d9b5027514e83121fe32d33d61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ScreenInstancePrefab: {fileID: -3236403376759477668, guid: bdb1a7fb3d9cd8442a0e7ba57396f574,
+  _ScreenInstancePrefab: {fileID: -7659623539450970905, guid: 034bb61c94396cd42ae8cfacc542603e,
     type: 3}
   _EventSystem: {fileID: 1440294210135985020, guid: caa1ce0f027deb54aaabd7608e124010,
     type: 3}
   _DefaultInputMode: 1
   _DefaultCursorVisibility: 0
+  _MaxPitchValue: 60
