@@ -155,6 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _Camera: {fileID: 4316801153536015461}
   m_UseTrackingMovement: 1
+  m_TrackingSpeed: 15
   m_Offset: {x: 0, y: 2, z: 0}
   _ArmLength: 5
   _MinArmLength: 3
