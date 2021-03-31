@@ -8,17 +8,11 @@ public sealed class ClosableWndTitlebar : MonoBehaviour, IDragHandler, IBeginDra
 	// 이동시킬 ClosableWnd 를 나타냅니다.
 	private ClosableWndBase _ClosableWnd;
 
-	public RectTransform rectTransform => transform as RectTransform;
+	public RectTransform rectTransform => (transform as RectTransform);
 
 	// 이전 입력 위치를 저장할 변수
 	private Vector2 _PrevInputPosition;
 	/// - 다음 드래그 위치를 계산하기 위해 사용됩니다.
-
-
-	public ClosableWndTitlebar()
-	{
-		rectTransform.sizeDelta = (transform.parent as RectTransform).sizeDelta;
-	}
 
 	private void Awake() =>
 		_ClosableWnd = transform.parent.GetComponent<ClosableWndBase>();
