@@ -8,6 +8,7 @@ public enum InputMode { GameOnly, UIOnly, GameAndUI }
 // 장비 아이템 장착 부위를 나타내기 위한 열거 형식입니다.
 public enum PartsType
 { 
+	Face,
 	Hair,
 	Head,
 	Body,
@@ -18,7 +19,6 @@ public enum PartsType
 
 	LeftWeapon,
 	RightWeapon,
-
 }
 
 

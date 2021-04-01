@@ -11,12 +11,13 @@ public class PlayerableCharacter:PlayerableCharacterBase
 	public CharacterController characterController { get; private set; }
 	public PlayerCharacterMovement movement { get; private set; }
 	public SpringArm springArm => _SpringArm;
-
+	public PlayerCharacterAnimController animController { get; private set; }
 
 	private void Awake()
 	{
 		characterController = GetComponent<CharacterController>();
 		movement = GetComponent<PlayerCharacterMovement>();
+		animController = GetComponent<PlayerCharacterAnimController>();
 
 		idCollider = characterController;
 	}
