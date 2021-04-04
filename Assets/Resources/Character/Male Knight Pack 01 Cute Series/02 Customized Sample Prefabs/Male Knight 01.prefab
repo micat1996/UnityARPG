@@ -315,7 +315,7 @@ GameObject:
   - component: {fileID: 6785888771761099402}
   - component: {fileID: 6785888771775054760}
   m_Layer: 0
-  m_Name: Male Knight 01
+  m_Name: Socket_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -349,6 +349,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -360,6 +361,7 @@ SkinnedMeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1652,11 +1654,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6785888769709988407}
     m_Modifications:
-    - target: {fileID: 1328574252371098816, guid: 830c07091a7a6c144a7cd3317cd3311b,
-        type: 3}
-      propertyPath: m_Name
-      value: Shield Crude
-      objectReference: {fileID: 0}
     - target: {fileID: 1328574252370665696, guid: 830c07091a7a6c144a7cd3317cd3311b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1711,6 +1708,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1328574252371098816, guid: 830c07091a7a6c144a7cd3317cd3311b,
+        type: 3}
+      propertyPath: m_Name
+      value: Shield Crude
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 830c07091a7a6c144a7cd3317cd3311b, type: 3}
@@ -1727,11 +1729,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6785888770463675823}
     m_Modifications:
-    - target: {fileID: 2236321467501359592, guid: 1741c9c38927fa94d8c562e3e4e66f3e,
-        type: 3}
-      propertyPath: m_Name
-      value: Timber Pack
-      objectReference: {fileID: 0}
     - target: {fileID: 2236321467500867016, guid: 1741c9c38927fa94d8c562e3e4e66f3e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1786,6 +1783,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236321467501359592, guid: 1741c9c38927fa94d8c562e3e4e66f3e,
+        type: 3}
+      propertyPath: m_Name
+      value: Timber Pack
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1741c9c38927fa94d8c562e3e4e66f3e, type: 3}
@@ -1877,6 +1879,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6785888769706048689}
     m_Modifications:
+    - target: {fileID: 5252911804229870885, guid: 42f65287e535a3449aee2f9a0f6cd60d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5252911804231810021, guid: 42f65287e535a3449aee2f9a0f6cd60d,
         type: 3}
       propertyPath: m_Name
