@@ -7,6 +7,12 @@ public struct EquipItemInfo
 	// 아이템 코드
 	public string itemCode;
 
+	// 장착 최소 레벨
+	public int minimumEquipLevel;
+
+	// 장착 가능 캐릭터 클래스
+	public CharacterClassType EquipableClass;
+
 	// 장착 부위
 	public PartsType partsType;
 

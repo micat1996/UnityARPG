@@ -9,7 +9,7 @@ using UnityEngine;
 + Head
 얼굴, 헤어, 머리, 헬멧
 
-null
+부모 오브젝트에 추가되어야 함.
 바디
 
 + Back
@@ -22,14 +22,12 @@ null
 주 무기
  */
 
-public sealed class PlayerCharacterEquipController: MonoBehaviour
+public sealed class PlayerCharacterEquipController : MonoBehaviour
 {
     // 파츠가 장착될 부모 트랜스폼을 나타냅니다.
     /// - key : 장착될 파츠를 나타냅니다.
     /// - value : 파츠의 부모 트랜스폼을 나타냅니다.
-    private Dictionary<PartsType, Transform> PartsSockets;
-
-    [SerializeField] private List<EquipSocket> _EquipSockets;
+    private Dictionary<PartsType, Transform> _PartsSockets = new Dictionary<PartsType, Transform>();
 
     public List<EquipItemInfo> equipInfos;
 
@@ -41,11 +39,7 @@ public sealed class PlayerCharacterEquipController: MonoBehaviour
     private void InitializeSockets()
     {
         // 각 파츠의 부모 오브젝트로 사용될 오브젝트의 이름을 저장합니다.
-        /// - "Owner" 는 Playerable Character 오브젝트 하위로 추가될 오브젝트이며, 파츠가 장착될 때
-        ///   이 오브젝트는 사라지도록 합니다.
         List<(PartsType partsType, string name)> partsDataToFind = new List<(PartsType, string)>();
-        partsDataToFind.Add((PartsType.Body,        "Owner"));
-
         partsDataToFind.Add((PartsType.Face,        "+ Head"));
         partsDataToFind.Add((PartsType.Hair,        "+ Head"));
         partsDataToFind.Add((PartsType.Head,        "+ Head"));
@@ -60,6 +54,10 @@ public sealed class PlayerCharacterEquipController: MonoBehaviour
         // 모든 파츠의 부모 오브젝트를 찾습니다.
         foreach(var partsData in partsDataToFind)
             FindParentTransform(transform, partsData.partsType, partsData.name);
+
+        //PartsSockets.Add(PartsType.Body)
+        /// - Body 는 Playerable Character 오브젝트 하위로 추가될 오브젝트이며, 이 파츠가 장착될 때
+        ///   이 오브젝트는 사라지도록 합니다.
     }
 
     // 파츠가 장착될 때 부모 오브젝트로 사용될 오브젝트를 찾습니다.
@@ -91,7 +89,7 @@ public sealed class PlayerCharacterEquipController: MonoBehaviour
             // 자식 오브젝트의 이름이 찾고자 하는 부모 오브젝트와 일치하는지 확인합니다.
             if (childTransform.gameObject.name == name)
             {
-                PartsSockets.Add(partsType, childTransform);
+                _PartsSockets.Add(partsType, childTransform);
                 break;
             }
 
@@ -100,15 +98,9 @@ public sealed class PlayerCharacterEquipController: MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-
-    }
-
-    // Start is called before the first frame update
     void OnDestroy()
     {
-        //foreach (var info in equipInfos)
-        //    ResourceManager.Instance.SaveJson(info, $"{info.itemCode}.json");
+        foreach (var info in equipInfos)
+            ResourceManager.Instance.SaveJson(info, "ItemInfos", $"{info.itemCode}.json", true);
     }
 }

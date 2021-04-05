@@ -21,6 +21,8 @@ public class PathFixer : EditorWindow
 	// 변환된 애셋 경로를 저장할 변수입니다.
 	public string convert = "";
 
+	public bool useDoubleQuotes;
+
 	[MenuItem("Window/CustomUtil/PathFixer")]
 	static void Init()
 	{
@@ -36,6 +38,7 @@ public class PathFixer : EditorWindow
 
 		// 경로 입력 칸 초기 값 설정
 		path = EditorGUILayout.TextField("Input Path", path);
+		useDoubleQuotes = EditorGUILayout.Toggle("Use Double Quotes", useDoubleQuotes);
 
 		// 만약 'CreatConvert' 버튼이 눌렸다면
 		if (GUILayout.Button("Convert"))
@@ -54,7 +57,10 @@ public class PathFixer : EditorWindow
 	{
 		int pathStartIndex = ori.IndexOf("Resources/") + ("Resources/".Length);
 		int dotIndex = ori.IndexOf(".");
-		return $"\"{ori.Substring(pathStartIndex, dotIndex - pathStartIndex)}\"";
+		if (useDoubleQuotes)
+			return $"\"{ori.Substring(pathStartIndex, dotIndex - pathStartIndex)}\"";
+		else 
+			return $"{ori.Substring(pathStartIndex, dotIndex - pathStartIndex)}";
 	}
 }
 #endif

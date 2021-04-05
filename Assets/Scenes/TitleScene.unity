@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -336,7 +336,1109 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad002d7273cc1da4190908d2167e31f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  equipInfos: []
+  equipInfos:
+  - itemCode: 000000
+    minimumEquipLevel: 0
+    EquipableClass: 0
+    partsType: 2
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 0
+    useHalfHair: 0
+    meshPrefabPath: Character/Female Mage Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Standard Heads  (+ Head )/Female Head
+      01 Fair"
+    meterialPath: Character/Materials/Fair Aqua
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 000001
+    minimumEquipLevel: 5
+    EquipableClass: 0
+    partsType: 2
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 0
+    useHalfHair: 0
+    meshPrefabPath: Character/Male Knight Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Standard Heads  (+ Head )/Head 01 Fair
+    meterialPath: '"Character/Materials/Fair Aqua"'
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 000100
+    minimumEquipLevel: 0
+    EquipableClass: 2
+    partsType: 3
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 0
+    useHalfHair: 0
+    meshPrefabPath: Character/Female Mage Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Body/Body01
+    meterialPath: Character/Materials/Fair Nature
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 000101
+    minimumEquipLevel: 5
+    EquipableClass: 2
+    partsType: 3
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 0
+    useHalfHair: 0
+    meshPrefabPath: Character/Female Mage Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Body/Body01
+    meterialPath: Character/Materials/Fair Aqua
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 000102
+    minimumEquipLevel: 10
+    EquipableClass: 2
+    partsType: 3
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 0
+    useHalfHair: 0
+    meshPrefabPath: Character/Female Mage Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Body/Body01
+    meterialPath: Character/Materials/Fair Fire
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 000103
+    minimumEquipLevel: 15
+    EquipableClass: 2
+    partsType: 3
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 0
+    useHalfHair: 0
+    meshPrefabPath: Character/Female Mage Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Body/Body01
+    meterialPath: Character/Materials/Fair Dark
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 000110
+    minimumEquipLevel: 20
+    EquipableClass: 2
+    partsType: 3
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 0
+    useHalfHair: 0
+    meshPrefabPath: Character/Male Knight Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Body/Body02
+    meterialPath: Character/Materials/Fair Nature
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 000111
+    minimumEquipLevel: 25
+    EquipableClass: 2
+    partsType: 3
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 0
+    useHalfHair: 0
+    meshPrefabPath: Character/Male Knight Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Body/Body02
+    meterialPath: Character/Materials/Fair Aqua
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 000112
+    minimumEquipLevel: 30
+    EquipableClass: 2
+    partsType: 3
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 0
+    useHalfHair: 0
+    meshPrefabPath: Character/Male Knight Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Body/Body02
+    meterialPath: Character/Materials/Fair Fire
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 000113
+    minimumEquipLevel: 35
+    EquipableClass: 2
+    partsType: 3
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 0
+    useHalfHair: 0
+    meshPrefabPath: Character/Male Knight Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Body/Body02
+    meterialPath: Character/Materials/Fair Dark
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 000120
+    minimumEquipLevel: 40
+    EquipableClass: 2
+    partsType: 3
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 0
+    useHalfHair: 0
+    meshPrefabPath: Character/Female Mage Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Body/Body03
+    meterialPath: Character/Materials/Fair Nature
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 000121
+    minimumEquipLevel: 45
+    EquipableClass: 2
+    partsType: 3
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 0
+    useHalfHair: 0
+    meshPrefabPath: Character/Female Mage Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Body/Body03
+    meterialPath: Character/Materials/Fair Aqua
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 000122
+    minimumEquipLevel: 50
+    EquipableClass: 2
+    partsType: 3
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 0
+    useHalfHair: 0
+    meshPrefabPath: Character/Female Mage Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Body/Body03
+    meterialPath: Character/Materials/Fair Fire
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 000123
+    minimumEquipLevel: 55
+    EquipableClass: 2
+    partsType: 3
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 0
+    useHalfHair: 0
+    meshPrefabPath: Character/Female Mage Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Body/Body03
+    meterialPath: Character/Materials/Fair Dark
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 000200
+    minimumEquipLevel: 0
+    EquipableClass: 1
+    partsType: 3
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 0
+    useHalfHair: 0
+    meshPrefabPath: Character/Male Knight Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Body/Body01
+    meterialPath: Character/Materials/Fair Nature
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 000201
+    minimumEquipLevel: 5
+    EquipableClass: 1
+    partsType: 3
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 0
+    useHalfHair: 0
+    meshPrefabPath: Character/Male Knight Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Body/Body01
+    meterialPath: Character/Materials/Fair Aqua
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 000202
+    minimumEquipLevel: 10
+    EquipableClass: 1
+    partsType: 3
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 0
+    useHalfHair: 0
+    meshPrefabPath: Character/Male Knight Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Body/Body01
+    meterialPath: Character/Materials/Fair Fire
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 000203
+    minimumEquipLevel: 15
+    EquipableClass: 1
+    partsType: 3
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 0
+    useHalfHair: 0
+    meshPrefabPath: Character/Male Knight Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Body/Body01
+    meterialPath: Character/Materials/Fair Dark
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 000210
+    minimumEquipLevel: 20
+    EquipableClass: 1
+    partsType: 3
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 0
+    useHalfHair: 0
+    meshPrefabPath: Character/Male Knight Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Body/Body02
+    meterialPath: Character/Materials/Fair Nature
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 000211
+    minimumEquipLevel: 25
+    EquipableClass: 1
+    partsType: 3
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 0
+    useHalfHair: 0
+    meshPrefabPath: Character/Male Knight Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Body/Body02
+    meterialPath: Character/Materials/Fair Aqua
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 000212
+    minimumEquipLevel: 30
+    EquipableClass: 1
+    partsType: 3
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 0
+    useHalfHair: 0
+    meshPrefabPath: Character/Male Knight Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Body/Body02
+    meterialPath: Character/Materials/Fair Fire
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 000213
+    minimumEquipLevel: 35
+    EquipableClass: 1
+    partsType: 3
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 0
+    useHalfHair: 0
+    meshPrefabPath: Character/Male Knight Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Body/Body02
+    meterialPath: Character/Materials/Fair Dark
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 000220
+    minimumEquipLevel: 40
+    EquipableClass: 1
+    partsType: 3
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 0
+    useHalfHair: 0
+    meshPrefabPath: Character/Male Knight Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Body/Body03
+    meterialPath: Character/Materials/Fair Nature
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 000221
+    minimumEquipLevel: 45
+    EquipableClass: 1
+    partsType: 3
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 0
+    useHalfHair: 0
+    meshPrefabPath: Character/Male Knight Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Body/Body03
+    meterialPath: Character/Materials/Fair Aqua
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 000222
+    minimumEquipLevel: 50
+    EquipableClass: 1
+    partsType: 3
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 0
+    useHalfHair: 0
+    meshPrefabPath: Character/Male Knight Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Body/Body03
+    meterialPath: Character/Materials/Fair Fire
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 000223
+    minimumEquipLevel: 55
+    EquipableClass: 1
+    partsType: 3
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 0
+    useHalfHair: 0
+    meshPrefabPath: Character/Male Knight Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Body/Body03
+    meterialPath: Character/Materials/Fair Dark
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 001100
+    minimumEquipLevel: 0
+    EquipableClass: 2
+    partsType: 5
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 1
+    useHalfHair: 0
+    meshPrefabPath: Character/Male Knight Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Body/Body03
+    meterialPath: Character/Materials/Fair Nature
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 001101
+    minimumEquipLevel: 5
+    EquipableClass: 2
+    partsType: 5
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 1
+    useHalfHair: 0
+    meshPrefabPath: Character/Male Knight Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Body/Body03
+    meterialPath: Character/Materials/Fair Aqua
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 001102
+    minimumEquipLevel: 10
+    EquipableClass: 2
+    partsType: 5
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 1
+    useHalfHair: 0
+    meshPrefabPath: Character/Male Knight Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Body/Body03
+    meterialPath: Character/Materials/Fair Fire
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 001103
+    minimumEquipLevel: 15
+    EquipableClass: 2
+    partsType: 5
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 1
+    useHalfHair: 0
+    meshPrefabPath: Character/Male Knight Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Body/Body03
+    meterialPath: Character/Materials/Fair Dark
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 001110
+    minimumEquipLevel: 20
+    EquipableClass: 2
+    partsType: 5
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 1
+    useHalfHair: 0
+    meshPrefabPath: Character/Female Mage Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Head Dress (+ Head )/Hat Judgment Aqua
+    meterialPath: Character/Materials/Fair Nature
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 001111
+    minimumEquipLevel: 25
+    EquipableClass: 2
+    partsType: 5
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 1
+    useHalfHair: 0
+    meshPrefabPath: Character/Female Mage Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Head Dress (+ Head )/Hat Judgment Aqua
+    meterialPath: Character/Materials/Fair Aqua
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 001112
+    minimumEquipLevel: 30
+    EquipableClass: 2
+    partsType: 5
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 1
+    useHalfHair: 0
+    meshPrefabPath: Character/Female Mage Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Head Dress (+ Head )/Hat Judgment Aqua
+    meterialPath: Character/Materials/Fair Fire
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 001113
+    minimumEquipLevel: 35
+    EquipableClass: 2
+    partsType: 5
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 1
+    useHalfHair: 0
+    meshPrefabPath: Character/Female Mage Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Head Dress (+ Head )/Hat Judgment Aqua
+    meterialPath: Character/Materials/Fair Dark
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 001200
+    minimumEquipLevel: 0
+    EquipableClass: 1
+    partsType: 5
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 1
+    useHalfHair: 0
+    meshPrefabPath: Character/Male Knight Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Head Dress (+ Head )/Helmet Endurance
+    meterialPath: Character/Materials/Helmet_ Nature
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 001201
+    minimumEquipLevel: 5
+    EquipableClass: 1
+    partsType: 5
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 1
+    useHalfHair: 0
+    meshPrefabPath: Character/Male Knight Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Head Dress (+ Head )/Helmet Endurance
+    meterialPath: Character/Materials/Helmet_Aqua
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 001202
+    minimumEquipLevel: 10
+    EquipableClass: 1
+    partsType: 5
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 1
+    useHalfHair: 0
+    meshPrefabPath: Character/Male Knight Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Head Dress (+ Head )/Helmet Endurance
+    meterialPath: Character/Materials/Helmet_ Fire
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 001203
+    minimumEquipLevel: 15
+    EquipableClass: 1
+    partsType: 5
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 1
+    useHalfHair: 0
+    meshPrefabPath: Character/Male Knight Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Head Dress (+ Head )/Helmet Endurance
+    meterialPath: Character/Materials/Fair Dark
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 001210
+    minimumEquipLevel: 20
+    EquipableClass: 1
+    partsType: 5
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 1
+    useHalfHair: 0
+    meshPrefabPath: Character/Male Knight Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Head Dress (+ Head )/Helmet Protector
+      Aqua
+    meterialPath: Character/Materials/Fair Nature
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 001211
+    minimumEquipLevel: 25
+    EquipableClass: 1
+    partsType: 5
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 1
+    useHalfHair: 0
+    meshPrefabPath: Character/Male Knight Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Head Dress (+ Head )/Helmet Protector
+      Aqua
+    meterialPath: Character/Materials/Fair Aqua
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 001212
+    minimumEquipLevel: 30
+    EquipableClass: 1
+    partsType: 5
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 1
+    useHalfHair: 0
+    meshPrefabPath: Character/Male Knight Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Head Dress (+ Head )/Helmet Protector
+      Aqua
+    meterialPath: Character/Materials/Fair Fire
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 001213
+    minimumEquipLevel: 35
+    EquipableClass: 1
+    partsType: 5
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 1
+    useHalfHair: 0
+    meshPrefabPath: Character/Male Knight Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Head Dress (+ Head )/Helmet Protector
+      Aqua
+    meterialPath: Character/Materials/Fair Dark
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 000010
+    minimumEquipLevel: 0
+    EquipableClass: 2
+    partsType: 0
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 0
+    useHalfHair: 0
+    meshPrefabPath: Character/Female Mage Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Standard Faces (+ Head)/Female Face
+      01 Brown
+    meterialPath: Character/Materials/Face Female 01 Brown
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 000011
+    minimumEquipLevel: 0
+    EquipableClass: 2
+    partsType: 0
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 0
+    useHalfHair: 0
+    meshPrefabPath: Character/Female Mage Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Standard Faces (+ Head)/Female Face
+      02 Brown
+    meterialPath: Character/Materials/Face Female 02 Brown
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 000012
+    minimumEquipLevel: 0
+    EquipableClass: 2
+    partsType: 0
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 0
+    useHalfHair: 0
+    meshPrefabPath: Assets/Resources/Character/Female Mage Pack 01 Cute Series/01
+      Customize Character Here/02 Attach Weapons and Accessories/Standard Faces (+
+      Head)/Female Face 03 Brown.prefab
+    meterialPath: Character/Materials/Face Female 03 Brown
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 000020
+    minimumEquipLevel: 0
+    EquipableClass: 1
+    partsType: 0
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 0
+    useHalfHair: 0
+    meshPrefabPath: Character/Male Knight Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Standard Faces (+ Head)/Face Male 01
+      Brown
+    meterialPath: Character/Materials/Face Male 01 Brown
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 000021
+    minimumEquipLevel: 0
+    EquipableClass: 1
+    partsType: 0
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 0
+    useHalfHair: 0
+    meshPrefabPath: Character/Male Knight Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Standard Faces (+ Head)/Face Male 02
+      Brown
+    meterialPath: Character/Materials/Face Male 02 Brown
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 000022
+    minimumEquipLevel: 0
+    EquipableClass: 1
+    partsType: 0
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 0
+    useHalfHair: 0
+    meshPrefabPath: Character/Male Knight Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Standard Faces (+ Head)/Face Male 03
+      Brown
+    meterialPath: Character/Materials/Face Male 03 Brown
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 002000
+    minimumEquipLevel: 10
+    EquipableClass: 1
+    partsType: 6
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 0
+    useHalfHair: 0
+    meshPrefabPath: Character/Male Knight Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Back Props (+Back)/Timber Pack
+    meterialPath: Character/Materials/Weapons and Props
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 002001
+    minimumEquipLevel: 20
+    EquipableClass: 1
+    partsType: 6
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 0
+    useHalfHair: 0
+    meshPrefabPath: Character/Materials/Weapons and Props
+    meterialPath: Character/Materials/Weapons and Props
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 002002
+    minimumEquipLevel: 30
+    EquipableClass: 0
+    partsType: 6
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 0
+    useHalfHair: 0
+    meshPrefabPath: Character/Female Mage Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Back Props (+Back)/Bag Luck
+    meterialPath: Character/Materials/Weapons and Props
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
+  - itemCode: 002003
+    minimumEquipLevel: 40
+    EquipableClass: 0
+    partsType: 6
+    localPosition: {x: 0, y: 0, z: 0}
+    localEulerAngle: {x: 0, y: 0, z: 0}
+    hideHairWhenEquipped: 0
+    useHalfHair: 0
+    meshPrefabPath: Character/Male Knight Pack 01 Cute Series/01 Customize Character
+      Here/02 Attach Weapons and Accessories/Back Props (+Back)/Survival Backpack
+    meterialPath: Character/Materials/Weapons and Props
+    halfHairPrefabPath: 
+    additionalArmor: 0
+    additionalMagicResistance: 0
+    additionalPhysicalDamage: 0
+    additionalMagicalDamage: 0
+    additionalMoveSpeed: 0
+    additionalJumpHeight: 0
+    additionalHp: 0
+    additionalMp: 0
+    additionalCriticalPercentage: 0
 --- !u!4 &1224927562
 Transform:
   m_ObjectHideFlags: 0
@@ -345,7 +1447,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1224927560}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.6131852, y: 4.71909, z: -2.0436}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
