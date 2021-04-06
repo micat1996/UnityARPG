@@ -31,21 +31,29 @@ public sealed class PlayerCharacterEquipController:MonoBehaviour
 
     // 장착된 파츠 오브젝트들을 저장합니다.
     private Dictionary<PartsType, GameObject> _PartsObject = new Dictionary<PartsType, GameObject>();
+    /// - 편한 오브젝트 추가와 제거를 위해 사용됩니다.
 
     public List<EquipItemInfo> equipInfos;
 
     private void Awake()
     {
+        InitializePartsObject();
         InitializeSockets();
     }
 
     // _PartsObject 의 요소를 미리 생성합니다.
     private void InitializePartsObject()
 	{
-        //foreach(var type in )
-		//{
-        //
-		//}
+        // 생성된 모든 파츠를 제거합니다.
+        if (_PartsObject.ContainsKey(PartsType.Body))
+            Destroy(_PartsObject[PartsType.Body]);
+        _PartsObject.Clear();
+
+        foreach (int value in System.Enum.GetValues(typeof(PartsType)))
+		{
+            PartsType partsType = (PartsType)value;
+            _PartsObject.Add(partsType, null);
+        }
 	}
 
     private void InitializeSockets()
@@ -128,16 +136,25 @@ public sealed class PlayerCharacterEquipController:MonoBehaviour
     {
         ref var playerInfo = ref (PlayerManager.Instance.playerController as PlayerController).playerCharacterInfo;
 
+        // 바디 파츠가 장착된 경우
         if (newEquipItemInfo.partsType == PartsType.Body)
 		{
+            // 캐릭터 전체 Mesh 를 제거합니다.
+            InitializePartsObject();
 
-		}
+            ResourceManager.Instance.LoadResource<GameObject>(
+                newEquipItemInfo.partsType.ToString(),
+                newEquipItemInfo.meshPrefabPath);
+        }
+        
+
 
 
     }
+
     void OnDestroy()
     {
-        foreach (var info in equipInfos)
-            ResourceManager.Instance.SaveJson(info, "ItemInfos", $"{info.itemCode}.json", true);
+        //foreach (var info in equipInfos)
+        //    ResourceManager.Instance.SaveJson(info, "ItemInfos", $"{info.itemCode}.json", true);
     }
 }
