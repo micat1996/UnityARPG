@@ -144,17 +144,11 @@ public sealed class PlayerCharacterMovement : MonoBehaviour
         // 이동 입력 값을 초기화합니다.
         _InputVector = Vector3.zero;
 
-        Vector3 input = new Vector3();
-        input.x = InputManager.GetAxis("Horizontal");
-        input.z = InputManager.GetAxis("Vertical");
-
-        Debug.Log("input = " + input);
-
-        //if (input != Vector3.zero) input.Normalize();
-
         // 이동 입력 값을 저장합니다.
-        _InputVector.x = input.x;
-        _InputVector.z = input.z;
+        _InputVector.x = InputManager.GetAxis("Horizontal");
+        _InputVector.z = InputManager.GetAxis("Vertical");
+
+        if (_InputVector != Vector3.zero) _InputVector.Normalize();
 
 
         // 이동 입력 값을 카메라 방향으로 변환합니다.

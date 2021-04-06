@@ -22,12 +22,15 @@ using UnityEngine;
 주 무기
  */
 
-public sealed class PlayerCharacterEquipController : MonoBehaviour
+public sealed class PlayerCharacterEquipController:MonoBehaviour
 {
     // 파츠가 장착될 부모 트랜스폼을 나타냅니다.
     /// - key : 장착될 파츠를 나타냅니다.
     /// - value : 파츠의 부모 트랜스폼을 나타냅니다.
     private Dictionary<PartsType, Transform> _PartsSockets = new Dictionary<PartsType, Transform>();
+
+    // 장착된 파츠 오브젝트들을 저장합니다.
+    private Dictionary<PartsType, GameObject> _PartsObject = new Dictionary<PartsType, GameObject>();
 
     public List<EquipItemInfo> equipInfos;
 
@@ -36,23 +39,37 @@ public sealed class PlayerCharacterEquipController : MonoBehaviour
         InitializeSockets();
     }
 
+    // _PartsObject 의 요소를 미리 생성합니다.
+    private void InitializePartsObject()
+	{
+        //foreach(var type in )
+		//{
+        //
+		//}
+	}
+
     private void InitializeSockets()
     {
+        // Body 오브젝트가 장착된다면 모든 파츠의 부모 오브젝트가 변경되며,
+        // 이때 Socket 들을 새로 갱신해야 하기 때문에 모든 요소를 비웁니다.
+        if (_PartsSockets.Count != 0)
+            _PartsSockets.Clear();
+
         // 각 파츠의 부모 오브젝트로 사용될 오브젝트의 이름을 저장합니다.
         List<(PartsType partsType, string name)> partsDataToFind = new List<(PartsType, string)>();
-        partsDataToFind.Add((PartsType.Face,        "+ Head"));
-        partsDataToFind.Add((PartsType.Hair,        "+ Head"));
-        partsDataToFind.Add((PartsType.Head,        "+ Head"));
-        partsDataToFind.Add((PartsType.Helmet,      "+ Head"));
+        partsDataToFind.Add((PartsType.Face, "+ Head"));
+        partsDataToFind.Add((PartsType.Hair, "+ Head"));
+        partsDataToFind.Add((PartsType.Head, "+ Head"));
+        partsDataToFind.Add((PartsType.Helmet, "+ Head"));
 
-        partsDataToFind.Add((PartsType.Cape,        "+ Back"));
-        partsDataToFind.Add((PartsType.Backpack,    "+ Back"));
+        partsDataToFind.Add((PartsType.Cape, "+ Back"));
+        partsDataToFind.Add((PartsType.Backpack, "+ Back"));
 
-        partsDataToFind.Add((PartsType.LeftWeapon,  "+ L Hand"));
+        partsDataToFind.Add((PartsType.LeftWeapon, "+ L Hand"));
         partsDataToFind.Add((PartsType.RightWeapon, "+ R Hand"));
 
         // 모든 파츠의 부모 오브젝트를 찾습니다.
-        foreach(var partsData in partsDataToFind)
+        foreach (var partsData in partsDataToFind)
             FindParentTransform(transform, partsData.partsType, partsData.name);
 
         //PartsSockets.Add(PartsType.Body)
@@ -98,6 +115,26 @@ public sealed class PlayerCharacterEquipController : MonoBehaviour
         }
     }
 
+    // 캐릭터 Mesh 를 변경합니다.
+    public void ChangeMesh(string itemCode)
+    {
+        EquipItemInfo equipItemInfo = ResourceManager.Instance.LoadJson<EquipItemInfo>(itemCode);
+
+        ChangeMesh(ref equipItemInfo);
+
+    }
+
+    private void ChangeMesh(ref EquipItemInfo newEquipItemInfo)
+    {
+        ref var playerInfo = ref (PlayerManager.Instance.playerController as PlayerController).playerCharacterInfo;
+
+        if (newEquipItemInfo.partsType == PartsType.Body)
+		{
+
+		}
+
+
+    }
     void OnDestroy()
     {
         foreach (var info in equipInfos)
