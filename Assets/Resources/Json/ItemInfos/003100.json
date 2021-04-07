@@ -2,7 +2,7 @@
     "itemCode": "003100",
     "minimumEquipLevel": 5,
     "EquipableClass": 2,
-    "partsType": 8,
+    "partsType": 7,
     "localPosition": {
         "x": 0.0,
         "y": 0.0,

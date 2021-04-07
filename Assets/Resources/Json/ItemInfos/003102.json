@@ -2,16 +2,16 @@
     "itemCode": "003102",
     "minimumEquipLevel": 30,
     "EquipableClass": 2,
-    "partsType": 8,
+    "partsType": 7,
     "localPosition": {
-        "x": -0.12600000202655793,
-        "y": -0.03400000184774399,
-        "z": 0.024000000208616258
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
     },
     "localEulerAngle": {
-        "x": -92.77200317382813,
-        "y": -3.213989019393921,
-        "z": 180.2220001220703
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
     },
     "hideHairWhenEquipped": false,
     "useHalfHair": false,

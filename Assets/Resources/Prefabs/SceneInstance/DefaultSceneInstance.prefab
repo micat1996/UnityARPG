@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 431554940, guid: 32e1a5d9b5027514e83121fe32d33d61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_playerControllerPrefab: {fileID: 2433612979868145981, guid: 277eb87e736dda04686a398f298d6346,
+  m_playerControllerPrefab: {fileID: 1641960349516939379, guid: 277eb87e736dda04686a398f298d6346,
     type: 3}
   m_PlayerableCharacterPrefab: {fileID: 232061461369167479, guid: 68b20b615540bf5469d9ec0d3b3ca3d9,
     type: 3}

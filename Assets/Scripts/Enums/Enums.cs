@@ -13,7 +13,6 @@ public enum PartsType
 	Head,
 	Body,
 
-	Cape,
 	Helmet,
 	Backpack,
 

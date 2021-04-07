@@ -71,6 +71,8 @@ public struct EquipItemInfo
 	public float additionalCriticalPercentage;
 
 
+	public bool IsEmpty() => string.IsNullOrEmpty(itemCode);
+
 
 }
 

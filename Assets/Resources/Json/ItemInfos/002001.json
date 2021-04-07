@@ -2,7 +2,7 @@
     "itemCode": "002001",
     "minimumEquipLevel": 20,
     "EquipableClass": 0,
-    "partsType": 6,
+    "partsType": 5,
     "localPosition": {
         "x": 0.0,
         "y": 0.0,
@@ -15,7 +15,7 @@
     },
     "hideHairWhenEquipped": false,
     "useHalfHair": false,
-    "meshPrefabPath": "Character/Materials/Weapons and Props",
+    "meshPrefabPath": "Character/Female Mage Pack 01 Cute Series/01 Customize Character Here/02 Attach Weapons and Accessories/Back Props (+Back)/Scroll Imperial",
     "meterialPath": "Character/Materials/Weapons and Props",
     "halfHairPrefabPath": "",
     "additionalArmor": 0.0,

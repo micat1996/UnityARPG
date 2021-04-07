@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2433612979868145980}
-  - component: {fileID: 2433612979868145981}
+  - component: {fileID: 1641960349516939379}
   m_Layer: 0
   m_Name: DefaultPlayerController
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2433612979868145981
+--- !u!114 &1641960349516939379
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,7 +40,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2433612979868145978}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -1783453183, guid: 32e1a5d9b5027514e83121fe32d33d61, type: 3}
+  m_Script: {fileID: 11500000, guid: 500fb67b27087204885ddfd7cdbf935b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _ScreenInstancePrefab: {fileID: -7659623539450970905, guid: 034bb61c94396cd42ae8cfacc542603e,

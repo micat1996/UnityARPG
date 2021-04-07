@@ -10,23 +10,24 @@ using UnityEngine;
 public struct PlayerCharacterInfo
 {
 	// 현재 장착중인 아이템 정보
-	public List<EquipItemInfo> Partsinfos;
+	public List<EquipItemInfo> partsInfos;
 
 	public void Initialize()
 	{
-		Partsinfos = new List<EquipItemInfo>();
+		partsInfos = new List<EquipItemInfo>();
 
-		Partsinfos.Add(ResourceManager.Instance.LoadJson<EquipItemInfo>("000200")); // 몸통
+		partsInfos.Add(ResourceManager.Instance.LoadJson<EquipItemInfo>("ItemInfos", "000200.json")); // 몸통
 
-		Partsinfos.Add(ResourceManager.Instance.LoadJson<EquipItemInfo>("000001")); // 머리
-		Partsinfos.Add(ResourceManager.Instance.LoadJson<EquipItemInfo>("000020")); // 얼굴
-		Partsinfos.Add(ResourceManager.Instance.LoadJson<EquipItemInfo>("000040")); // 머리카락
-		Partsinfos.Add(ResourceManager.Instance.LoadJson<EquipItemInfo>("001200")); // 모자
+		partsInfos.Add(ResourceManager.Instance.LoadJson<EquipItemInfo>("ItemInfos", "000001.json")); // 머리
+		partsInfos.Add(ResourceManager.Instance.LoadJson<EquipItemInfo>("ItemInfos", "000020.json")); // 얼굴
+		partsInfos.Add(ResourceManager.Instance.LoadJson<EquipItemInfo>("ItemInfos", "000040.json")); // 머리카락
 
-		Partsinfos.Add(ResourceManager.Instance.LoadJson<EquipItemInfo>("003200")); // 주무기
-		Partsinfos.Add(ResourceManager.Instance.LoadJson<EquipItemInfo>("004000")); // 방패
+		partsInfos.Add(ResourceManager.Instance.LoadJson<EquipItemInfo>("ItemInfos", "001200.json")); // 모자
+		partsInfos.Add(ResourceManager.Instance.LoadJson<EquipItemInfo>("ItemInfos", "003200.json")); // 주무기
+		partsInfos.Add(ResourceManager.Instance.LoadJson<EquipItemInfo>("ItemInfos", "004000.json")); // 방패
 
-		Partsinfos.Add(ResourceManager.Instance.LoadJson<EquipItemInfo>("002000")); // 가방
+		partsInfos.Add(ResourceManager.Instance.LoadJson<EquipItemInfo>("ItemInfos", "002000.json")); // 가방
+
 	}
 
 

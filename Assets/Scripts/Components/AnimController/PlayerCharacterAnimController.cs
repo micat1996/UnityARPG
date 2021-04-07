@@ -14,6 +14,7 @@ public sealed class PlayerCharacterAnimController : AnimController
 
 	private void Update()
 	{
+		if (!controlledAnimator) return;
 		SetParam("_VelocityLength", _PlayerableCharacter.movement.velocity.magnitude);
 		SetParam("_IsInAir", !_PlayerableCharacter.movement.isGrounded);
 	}
