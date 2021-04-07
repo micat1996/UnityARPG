@@ -155,7 +155,7 @@ public sealed class PlayerCharacterMovement : MonoBehaviour
         _InputVector = _PlayerCharacter.springArm.InputToCameraDirection(_InputVector);
 
         // 점프 입력 처리를 합니다.
-        if (InputManager.GetAction("Jump", UnityStartUpFramework.Enums.ActionInput.Stay))
+        if (InputManager.GetAction("Jump", UnityStartUpFramework.Enums.ActionEvent.Stay))
             JumpInput();
         else FinishJumpInput();
 
