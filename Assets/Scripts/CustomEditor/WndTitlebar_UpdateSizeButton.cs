@@ -14,10 +14,10 @@ public sealed class WndTitlebar_UpdateSizeButton:Editor
 		ClosableWndTitlebar component = target as ClosableWndTitlebar;
 
 		// 버튼 추가
-		if (GUILayout.Button("UpdateSize"))
+		if (GUILayout.Button("Fill Horizontal"))
 			AttachToGround(component);
 	}
 
 	private void AttachToGround(ClosableWndTitlebar component) =>
-		component.UpdateSize();
+		component.FillHorizontal();
 }

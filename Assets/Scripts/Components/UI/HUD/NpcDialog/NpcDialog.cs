@@ -10,8 +10,9 @@ public sealed class NpcDialog : MonoBehaviour
 	[SerializeField] private Image _Image_NpcNameBackgournd;
 
 	[Header("Menu Buttons")]
-	[SerializeField] private Button _Button_NextDialog;
+	[SerializeField] private Button _Button_Shop;
 	[SerializeField] private Button _Button_Close;
+	[SerializeField] private Button _Button_NextDialog;
 
 	[Header("Dialog")]
 	[SerializeField] private TextMeshProUGUI _TMP_DialogText;
@@ -48,6 +49,16 @@ public sealed class NpcDialog : MonoBehaviour
 			{
 				onDlgClosed?.Invoke();
 				PlayerManager.Instance.playerController.screenInstance.CloseChildHUD(rectTransform);
+			});
+
+		_Button_Shop.onClick.AddListener(
+			() =>
+			{
+				var gameScreenInstance = (PlayerManager.Instance.playerController.screenInstance as GameScreenInstance);
+				gameScreenInstance.CreateWnd(
+					ResourceManager.Instance.LoadResource<GameObject>(
+						"ClosableWnd",
+						"Prefabs/Wnds/ClosableWnd").GetComponent<ClosableWndBase>());
 			});
 
 		_Button_NextDialog.onClick.AddListener(NextDialog);

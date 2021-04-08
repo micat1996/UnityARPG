@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 232061461369167477}
   - component: {fileID: -8022356308814944254}
   - component: {fileID: 5797127550115384795}
+  - component: {fileID: 5341599021407077257}
   m_Layer: 10
   m_Name: PlayerableCharacter
   m_TagString: Untagged
@@ -93,7 +94,7 @@ MonoBehaviour:
   _JumpVelocityY: 10
   _IgnoreGroundLayers:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 2147484672
   _GravityScale: 1
   _MaxYVelocity: 10
 --- !u!114 &-8022356308814944254
@@ -122,6 +123,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipInfos: []
+--- !u!114 &5341599021407077257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232061461369167499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 993074e4962107d438547fcbd1312c61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _InteractableAreas: []
 --- !u!1 &544673992989924169
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,7 +193,7 @@ MonoBehaviour:
   _UseControllerRoll: 0
   _LayerToIgnore:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 2147484672
 --- !u!1 &1355768805494623092
 GameObject:
   m_ObjectHideFlags: 0

@@ -40,6 +40,8 @@ public sealed class Npc : MonoBehaviour
 				// NpcDialog 생성
 				var npcDialog = PlayerManager.Instance.playerController.screenInstance.CreateChildHUD(_HUD_NpcDialogPrefab);
 
+				npcDialog.rectTransform.offsetMin = npcDialog.rectTransform.offsetMax = Vector2.zero;
+
 				// NpcDialog 초기화
 				npcDialog.InitializeNpcDialog(this);
 
