@@ -19,6 +19,7 @@ public sealed class NpcDialog : MonoBehaviour
 
 	private Npc _OwnerNpc;
 	private ContentSizeFitter _TMP_NpcNameContentSizeFitter;
+	private GameScreenInstance _GameScreenInstance;
 
 	// 표시되는 대화 정보를 나타냅니다.
 	private NpcDialogInfo _DialogInfos;
@@ -38,15 +39,23 @@ public sealed class NpcDialog : MonoBehaviour
 	{
 		_TMP_NpcNameContentSizeFitter = _TMP_NpcName.GetComponent<ContentSizeFitter>();
 
+		_GameScreenInstance = (PlayerManager.Instance.playerController.screenInstance as GameScreenInstance);
+
 		BindButtonEvents();
 	}
 
 	// 버튼 클릭 이벤트를 바인딩합니다.
 	private void BindButtonEvents()
 	{
+
 		_Button_Close.onClick.AddListener(
 			() => 
 			{
+				// FadeOut 효과
+				_GameScreenInstance.effectController.PlayAnimation(ScreenEffectType.ScreenFadeOut);
+
+				InitializeDialog();
+
 				onDlgClosed?.Invoke();
 				PlayerManager.Instance.playerController.screenInstance.CloseChildHUD(rectTransform);
 			});
@@ -54,11 +63,16 @@ public sealed class NpcDialog : MonoBehaviour
 		_Button_Shop.onClick.AddListener(
 			() =>
 			{
+				// FadeOut 효과
+				_GameScreenInstance.effectController.PlayAnimation(ScreenEffectType.ScreenFadeOut);
+
+				InitializeDialog();
+
 				var gameScreenInstance = (PlayerManager.Instance.playerController.screenInstance as GameScreenInstance);
 				gameScreenInstance.CreateWnd(
 					ResourceManager.Instance.LoadResource<GameObject>(
-						"ClosableWnd",
-						"Prefabs/Wnds/ClosableWnd").GetComponent<ClosableWndBase>());
+						"NpcShopWnd",
+						"Prefabs/UI/Wnds/NpcShopWnd/NpcShopWnd").GetComponent<ClosableWndBase>());
 			});
 
 		_Button_NextDialog.onClick.AddListener(NextDialog);
