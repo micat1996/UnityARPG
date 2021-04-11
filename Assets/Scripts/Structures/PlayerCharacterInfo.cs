@@ -16,17 +16,17 @@ public struct PlayerCharacterInfo
 	{
 		partsInfos = new List<EquipItemInfo>();
 
-		partsInfos.Add(ResourceManager.Instance.LoadJson<EquipItemInfo>("ItemInfos", "000200.json")); // 몸통
+		partsInfos.Add(ResourceManager.Instance.LoadJson<EquipItemInfo>("EquipItemInfos", "000200.json")); // 몸통
 
-		partsInfos.Add(ResourceManager.Instance.LoadJson<EquipItemInfo>("ItemInfos", "000001.json")); // 머리
-		partsInfos.Add(ResourceManager.Instance.LoadJson<EquipItemInfo>("ItemInfos", "000020.json")); // 얼굴
-		partsInfos.Add(ResourceManager.Instance.LoadJson<EquipItemInfo>("ItemInfos", "000040.json")); // 머리카락
+		partsInfos.Add(ResourceManager.Instance.LoadJson<EquipItemInfo>("EquipItemInfos", "000001.json")); // 머리
+		partsInfos.Add(ResourceManager.Instance.LoadJson<EquipItemInfo>("EquipItemInfos", "000020.json")); // 얼굴
+		partsInfos.Add(ResourceManager.Instance.LoadJson<EquipItemInfo>("EquipItemInfos", "000040.json")); // 머리카락
 
-		partsInfos.Add(ResourceManager.Instance.LoadJson<EquipItemInfo>("ItemInfos", "001200.json")); // 모자
-		partsInfos.Add(ResourceManager.Instance.LoadJson<EquipItemInfo>("ItemInfos", "003200.json")); // 주무기
-		partsInfos.Add(ResourceManager.Instance.LoadJson<EquipItemInfo>("ItemInfos", "004000.json")); // 방패
+		partsInfos.Add(ResourceManager.Instance.LoadJson<EquipItemInfo>("EquipItemInfos", "001200.json")); // 모자
+		partsInfos.Add(ResourceManager.Instance.LoadJson<EquipItemInfo>("EquipItemInfos", "003200.json")); // 주무기
+		partsInfos.Add(ResourceManager.Instance.LoadJson<EquipItemInfo>("EquipItemInfos", "004000.json")); // 방패
 
-		partsInfos.Add(ResourceManager.Instance.LoadJson<EquipItemInfo>("ItemInfos", "002000.json")); // 가방
+		partsInfos.Add(ResourceManager.Instance.LoadJson<EquipItemInfo>("EquipItemInfos", "002000.json")); // 가방
 
 	}
 

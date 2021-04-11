@@ -137,7 +137,7 @@ public sealed class PlayerCharacterEquipController:MonoBehaviour
     // 캐릭터 Mesh 를 변경합니다.
     public void EquipMesh(string itemCode)
     {
-        EquipItemInfo equipItemInfo = ResourceManager.Instance.LoadJson<EquipItemInfo>("ItemInfos", itemCode);
+        EquipItemInfo equipItemInfo = ResourceManager.Instance.LoadJson<EquipItemInfo>("EquipItemInfos", itemCode);
 
         EquipMesh(equipItemInfo);
 
@@ -290,6 +290,6 @@ public sealed class PlayerCharacterEquipController:MonoBehaviour
     void OnDestroy()
     {
         //foreach (var info in equipInfos)
-        //    ResourceManager.Instance.SaveJson(info, "ItemInfos", $"{info.itemCode}.json", true);
+        //    ResourceManager.Instance.SaveJson(info, "EquipItemInfos", $"{info.itemCode}.json", true);
     }
 }

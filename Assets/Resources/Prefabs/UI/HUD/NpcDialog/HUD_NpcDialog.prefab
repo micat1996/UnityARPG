@@ -686,6 +686,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _TMP_NpcName: {fileID: 289472654482960128}
   _Image_NpcNameBackgournd: {fileID: 289472654016355306}
+  _Button_GoToFirst: {fileID: 8786184890450768253}
   _Button_Shop: {fileID: 7098613187612395418}
   _Button_Close: {fileID: 6439393910153613592}
   _Button_NextDialog: {fileID: 8015278668923125418}
