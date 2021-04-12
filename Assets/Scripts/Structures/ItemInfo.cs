@@ -26,10 +26,24 @@ public struct ItemInfo
 	public int maxSlotCount;
 
 	// 아이템 판매 가격
-	public int Price;
+	public int price;
 
 	// 아이템 등급
 	// 장비 아이템과 소비 아이템에만 적용됩니다.
 	//public ItemLevel itemLevel;
+
+	public bool isEmpty => string.IsNullOrEmpty(itemCode);
+
+	public ItemInfo(string itemCode, ItemType itemType, string itemName, 
+		string itemDescription, string itemImagePath, int maxSlotCount, int price)
+	{
+		this.itemCode			= itemCode;
+		this.itemType			= itemType;
+		this.itemName			= itemName;
+		this.itemDescription	= itemDescription;
+		this.itemImagePath		= itemImagePath;
+		this.maxSlotCount		= maxSlotCount;
+		this.price				= price;
+	}
 
 }

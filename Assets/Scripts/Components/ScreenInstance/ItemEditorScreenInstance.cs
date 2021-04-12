@@ -9,7 +9,6 @@ public class ItemEditorScreenInstance : ScreenInstance
 		base.Awake();
 
 		FloatingItemEditor();
-
 	}
 
 	// 아이템 에디터를 띄웁니다.
