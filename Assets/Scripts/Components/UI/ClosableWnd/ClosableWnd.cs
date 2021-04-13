@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class ClosableWnd : ClosableWndBase
 {
-
-	[Header("Titlebar")]
-	[SerializeField] private ClosableWndTitlebar _ClosableWndTitlebar;
-
+	private ClosableWndTitlebar _ClosableWndTitlebar;
 
 	public ClosableWndTitlebar closableWndTitlebar => _ClosableWndTitlebar;
 
-	private void Awake()
+	protected virtual void Awake()
 	{
+		_ClosableWndTitlebar = GetComponentInChildren<ClosableWndTitlebar>();
+
 		// 닫기 버튼이 눌린 경우 이 창을 닫도록 합니다.
 		_ClosableWndTitlebar.closeButton.onClick.AddListener(CloseThisWnd);
 	}
