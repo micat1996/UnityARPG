@@ -30,7 +30,7 @@ public sealed class ItemInfoPanel : MonoBehaviour
 				_ConnectedItemCodeButtonPanel.SetItemCode(text);
 			}
 
-			_InputField_ItemImagePath.text = $"Image/ItemImage/{text}";
+			UpdateImagePath();
 		});
 
 		_Button_SlotBackground.onClick.AddListener(() =>
@@ -58,6 +58,11 @@ public sealed class ItemInfoPanel : MonoBehaviour
 			break;
 			}
 		});
+	}
+
+	public void UpdateImagePath()
+	{
+		_InputField_ItemImagePath.text = $"Image/ItemImage/{_InputField_ItemCode.text}";
 	}
 
 

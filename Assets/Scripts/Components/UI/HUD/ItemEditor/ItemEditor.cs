@@ -40,7 +40,7 @@ public sealed class ItemEditor : MonoBehaviour
 				ResourceManager.Instance.SaveJson<ItemInfo>(
 					itemCodePanel.m_ItemInfo.Value,
 					"ItemInfos",
-					itemCodePanel.m_ItemInfo.Value.itemCode, true);
+					itemCodePanel.m_ItemInfo.Value.itemCode + ".json", true);
 			}
 		});
 	}
@@ -67,11 +67,32 @@ public sealed class ItemEditor : MonoBehaviour
 	// 아이템 코드 버튼을 추가합니다.
 	private void AddItemCodeButton(ItemInfo? newItemInfo)
 	{
-		var newItemCodeButtonPanel = Instantiate(_Panel_ItemCodeButtonPrefab, _Panel_ItemCodes);
+		bool copy = (Input.GetKey(KeyCode.LeftShift) && _ItemCodePanels.Count != 0);
+
+		ItemCodeButtonPanel newItemCodeButtonPanel;
+		if (copy)
+			newItemCodeButtonPanel = Instantiate(_ItemCodePanels[_ItemCodePanels.Count - 1], _Panel_ItemCodes);
+		else newItemCodeButtonPanel = Instantiate(_Panel_ItemCodeButtonPrefab, _Panel_ItemCodes);
+
 		newItemCodeButtonPanel.m_ItemEditor = this;
-		_ItemCodePanels.Add(newItemCodeButtonPanel);
+
+		Debug.Log("copy = " + copy);
+
 
 		newItemCodeButtonPanel.m_ItemInfo = (newItemInfo.HasValue) ? newItemInfo : null;
+		if (copy)
+		{
+			var copyedInfo = _ItemCodePanels[_ItemCodePanels.Count - 1].m_ItemInfo.Value;
+
+			int itemCode = int.Parse(copyedInfo.itemCode);
+			++itemCode;
+			copyedInfo.itemCode = itemCode.ToString();
+
+			newItemCodeButtonPanel.m_ItemInfo = copyedInfo;
+		}
+
+
+		_ItemCodePanels.Add(newItemCodeButtonPanel);
 	}
 
 	public void AllItemCodeButtonSelectCancel()
