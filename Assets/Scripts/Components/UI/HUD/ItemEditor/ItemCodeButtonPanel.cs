@@ -6,8 +6,10 @@ using UnityEngine.UI;
 public sealed class ItemCodeButtonPanel: MonoBehaviour
 {
 	[HideInInspector] public ItemEditor m_ItemEditor;
-	[HideInInspector] public ItemInfo? m_ItemInfo;
+	//[HideInInspector] 
+	public ItemInfo? m_ItemInfo;
 
+	[SerializeField] private Text _Text_ItemCode;
 	[SerializeField] private Button _Button_ShowItemInfo;
 	[SerializeField] private Button _Button_Delete;
 	[SerializeField] private Image _Image_Selected;
@@ -17,6 +19,12 @@ public sealed class ItemCodeButtonPanel: MonoBehaviour
 		_Image_Selected.enabled = false;
 
 		BindButtonEvents();
+
+	}
+
+	private void Start()
+	{
+		_Button_ShowItemInfo.onClick?.Invoke();
 	}
 
 	private void BindButtonEvents()
@@ -26,6 +34,7 @@ public sealed class ItemCodeButtonPanel: MonoBehaviour
 			m_ItemEditor.AllItemCodeButtonSelectCancel();
 			OnButtonSelected();
 
+			m_ItemEditor.itemInfoPanel.ApplyInfo();
 			m_ItemEditor.itemInfoPanel.InitializeItemInfoPanel(this, m_ItemInfo);
 		});
 
@@ -43,6 +52,9 @@ public sealed class ItemCodeButtonPanel: MonoBehaviour
 		_Image_Selected.enabled = false;
 	}
 
+	public void SetItemCode(string newCode) => _Text_ItemCode.text = newCode;
 
-	
+
+
+
 }

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public sealed class ItemEditor : MonoBehaviour
 {
 
+	[SerializeField] private Button _Button_SaveAll;
 	[SerializeField] private Button _Button_AddItemInfo;
 	[SerializeField] private Transform _Panel_ItemCodes;
 	[SerializeField] private ItemInfoPanel _Panel_ItemInfo;
@@ -32,6 +33,16 @@ public sealed class ItemEditor : MonoBehaviour
 	private void BindButtonEvents()
 	{
 		_Button_AddItemInfo.onClick.AddListener(() => { AddItemCodeButton(null); });
+		_Button_SaveAll.onClick.AddListener(() =>
+		{
+			foreach(var itemCodePanel in _ItemCodePanels)
+			{
+				ResourceManager.Instance.SaveJson<ItemInfo>(
+					itemCodePanel.m_ItemInfo.Value,
+					"ItemInfos",
+					itemCodePanel.m_ItemInfo.Value.itemCode, true);
+			}
+		});
 	}
 
 	// 모든 아이템 정보를 읽어들입니다.
@@ -74,5 +85,7 @@ public sealed class ItemEditor : MonoBehaviour
 		_ItemCodePanels.Remove(itemCodeButtonPanel);
 		Destroy(itemCodeButtonPanel.gameObject);
 	}
+
+
 
 }

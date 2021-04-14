@@ -24,7 +24,13 @@ public sealed class ItemInfoPanel : MonoBehaviour
 		_InputField_ItemCode.onValueChanged.AddListener((text) =>
 		{
 			if (string.IsNullOrEmpty(_InputField_ItemCode.text)) return;
-			_InputField_ItemImagePath.text = $"Image/ItemImage/{_InputField_ItemCode.text}";
+
+			if (_ConnectedItemCodeButtonPanel != null)
+			{
+				_ConnectedItemCodeButtonPanel.SetItemCode(text);
+			}
+
+			_InputField_ItemImagePath.text = $"Image/ItemImage/{text}";
 		});
 
 		_Button_SlotBackground.onClick.AddListener(() =>
@@ -36,6 +42,21 @@ public sealed class ItemInfoPanel : MonoBehaviour
 
 			Rect rect = new Rect(0.0f, 0.0f, loadedTexture.width, loadedTexture.height);
 			_Image_ItemImage.sprite = Sprite.Create(loadedTexture, rect, Vector2.one * 0.5f);
+		});
+
+		_Dropdown_ItemType.onValueChanged.AddListener((int value) =>
+		{
+			switch ((ItemType)value)
+			{
+			case ItemType.EtCetera:
+			case ItemType.Consumption:
+			_InputField_ItemMaxCount.text = "200";
+			break;
+
+			case ItemType.Equipment:
+			_InputField_ItemMaxCount.text = "1";
+			break;
+			}
 		});
 	}
 
@@ -53,6 +74,8 @@ public sealed class ItemInfoPanel : MonoBehaviour
 			_InputField_ItemDescription.text = itemInfo.Value.itemDescription;
 			_InputField_ItemMaxCount.text = itemInfo.Value.maxSlotCount.ToString();
 			_InputField_ItemPrice.text = itemInfo.Value.price.ToString();
+
+			_Button_SlotBackground.onClick?.Invoke();
 		}
 		else
 		{
@@ -62,13 +85,22 @@ public sealed class ItemInfoPanel : MonoBehaviour
 				_InputField_ItemDescription.text =
 				_InputField_ItemMaxCount.text =
 				_InputField_ItemPrice.text = "";
+			_Image_ItemImage.sprite = null;
+
+			_Dropdown_ItemType.value = 0;
+
+			_Dropdown_ItemType.onValueChanged?.Invoke(0);
 		}
 	}
 
 	public void ApplyInfo()
 	{
-		if (!_ConnectedItemCodeButtonPanel.m_ItemInfo.HasValue) return;
-		if (_ConnectedItemCodeButtonPanel.m_ItemInfo.Value.isEmpty) return;
+		if (!_ConnectedItemCodeButtonPanel) return;
+
+		int itemMaxCount;
+		int itemPrice;
+		if (!int.TryParse(_InputField_ItemMaxCount.text, out itemMaxCount)) itemMaxCount = 0;
+		if (!int.TryParse(_InputField_ItemPrice.text, out itemPrice)) itemPrice = 0;
 
 		_ConnectedItemCodeButtonPanel.m_ItemInfo = new ItemInfo(
 			_InputField_ItemCode.text,
@@ -76,8 +108,8 @@ public sealed class ItemInfoPanel : MonoBehaviour
 			_InputField_ItemName.text,
 			_InputField_ItemDescription.text,
 			_InputField_ItemImagePath.text,
-			int.Parse(_InputField_ItemMaxCount.text),
-			int.Parse(_InputField_ItemPrice.text));
+			itemMaxCount,
+			itemPrice);
 	}
 
 
