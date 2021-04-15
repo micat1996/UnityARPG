@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: e9983ac5bb7439a4982f9c7c27ee5090,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1934,6 +1934,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: DefaultSceneInstance (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6902014201309872305, guid: e2939764bd42e194191951eaf0e4453f,
+        type: 3}
+      propertyPath: m_PlayerControllerPrefab
+      value: 
+      objectReference: {fileID: -269107220438762445, guid: 9ec8a9e51d0d6a94cb66cd8f232b38e7,
+        type: 3}
     - target: {fileID: 6902014201309873998, guid: e2939764bd42e194191951eaf0e4453f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2001,23 +2007,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1493612447}
   - component: {fileID: 1493612446}
-  - component: {fileID: 1493612445}
   - component: {fileID: 1493612448}
   m_Layer: 0
   m_Name: Main Camera
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1493612445
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1493612444}
-  m_Enabled: 1
 --- !u!20 &1493612446
 Camera:
   m_ObjectHideFlags: 0
