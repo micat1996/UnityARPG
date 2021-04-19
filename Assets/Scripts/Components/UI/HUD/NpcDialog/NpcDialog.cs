@@ -19,6 +19,8 @@ public sealed class NpcDialog : MonoBehaviour
 	[Header("Dialog")]
 	[SerializeField] private TextMeshProUGUI _TMP_DialogText;
 
+	private static NpcShopWnd _NpcShopWndPrefab;
+
 	// 이 Dialog 와 연결된 Npc 를 나타냅니다.
 	private Npc _ConnectedNpc;
 
@@ -42,7 +44,7 @@ public sealed class NpcDialog : MonoBehaviour
 
 	#region WndInstances...
 	// 생서된 상점 창을 나타냅니다.
-	private ClosableWndBase _ShopWndInstance;
+	private NpcShopWnd _NpcShopWnd;
 	#endregion
 
 	// 이 HUD 의 RectTransform 을 나타냅니다.
@@ -69,6 +71,13 @@ public sealed class NpcDialog : MonoBehaviour
 
 	private void Awake()
 	{
+		if (!_NpcShopWndPrefab)
+		{
+			_NpcShopWndPrefab = ResourceManager.Instance.LoadResource<GameObject>(
+				"Wnd_NpcShop",
+				"Prefabs/UI/Wnds/NpcShopWnd/NpcShopWnd").GetComponent<NpcShopWnd>();
+		}
+
 		// ContentSizeFitter 를 얻습니다.
 		_TMP_NpcNameContentSizeFitter = _TMP_NpcName.GetComponent<ContentSizeFitter>();
 		
@@ -90,7 +99,7 @@ public sealed class NpcDialog : MonoBehaviour
 			() =>
 			{
 				// 이미 상점 창이 열려있다면 실행하지 않습니다.
-				if (_ShopWndInstance != null) return;
+				if (_NpcShopWnd != null) return;
 
 				// FadeOut 효과
 				_GameScreenInstance.effectController.PlayAnimation(ScreenEffectType.ScreenFadeOut);
@@ -100,13 +109,17 @@ public sealed class NpcDialog : MonoBehaviour
 
 				// 상점 창을 엽니다.
 				var gameScreenInstance = (PlayerManager.Instance.playerController.screenInstance as GameScreenInstance);
-				_ShopWndInstance = gameScreenInstance.CreateWnd(
-					ResourceManager.Instance.LoadResource<GameObject>(
-						"NpcShopWnd",
-						"Prefabs/UI/Wnds/NpcShopWnd/NpcShopWnd").GetComponent<ClosableWndBase>());
+				_NpcShopWnd = gameScreenInstance.CreateWnd(_NpcShopWndPrefab) as NpcShopWnd;
+
+				// 상점 정보를 읽습니다.
+				ShopInfo shopInfo = ResourceManager.Instance.LoadJson<ShopInfo>(
+					"ShopInfos", $"{_ConnectedNpc.npcInfo.shopCode}.json");
+
+				// 상점 창 초기화
+				_NpcShopWnd.InitializeNpcShop(shopInfo);
 
 				// 상점 창이 닫힐 때 실행할 내용을 정의합니다.
-				_ShopWndInstance.onWndClosedEvent += () => _ShopWndInstance = null;
+				_NpcShopWnd.onWndClosedEvent += () => _NpcShopWnd = null;
 			});
 
 		// 닫기 버튼을 눌렀을 때 실행할 내용을 정의합니다.

@@ -5,7 +5,7 @@ using UnityEngine;
 public class ItemSlot:BaseSlot
 {
 	// 아이템 정보를 나타냅니다.
-	protected ItemInfo m_ItemInfo;
+	[SerializeField]protected ItemInfo m_ItemInfo;
 
 	public ItemInfo itemInfo => m_ItemInfo;
 
@@ -69,10 +69,10 @@ public class ItemSlot:BaseSlot
 
 			// 이미지 로드에 실패한 경우 투명한 이미지를 사용하도록 합니다.
 			itemImage = itemImage ?? m_T_NULL;
-
-			// 아이템 이미지 적용
-			Rect rect = new Rect(0.0f, 0.0f, itemImage.width, itemImage.height);
-			slotImage.sprite = Sprite.Create(itemImage, rect, Vector2.one * 0.5f);
 		}
+
+		// 아이템 이미지 적용
+		Rect rect = new Rect(0.0f, 0.0f, itemImage.width, itemImage.height);
+		slotImage.sprite = Sprite.Create(itemImage, rect, Vector2.one * 0.5f);
 	}
 }

@@ -105,15 +105,17 @@ public class BaseSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 	{
 		// 드래그 드랍을 사용하지 않는다면 실행하지 않습니다.
 		if (!m_UseDragDrop) return;
-			// UI 영역과 겹침 끝남
-			_ScreenInstance.dragDropOperation?.OnPointerExit(this);
+
+		// UI 영역과 겹침 끝남
+		_ScreenInstance.dragDropOperation?.OnPointerExit(this);
 	}
 
 	void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData)
 	{
 		// 드래그 드랍을 사용하지 않는다면 실행하지 않습니다.
 		if (!m_UseDragDrop) return;
-			// UI 영역과 겹침
-			_ScreenInstance.dragDropOperation?.OnPointerEnter(this);
+
+		// UI 영역과 겹침
+		_ScreenInstance.dragDropOperation?.OnPointerEnter(this);
 	}
 }

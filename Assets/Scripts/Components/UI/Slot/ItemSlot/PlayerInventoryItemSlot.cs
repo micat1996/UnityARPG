@@ -32,7 +32,31 @@ public sealed class PlayerInventoryItemSlot:ItemSlot
 		// 드래그 시작 시 실행할 내용 정의
 		onSlotBeginDragEvent += (dragDropOperation, dragVisual) =>
 			{
+				// 드래그 비쥬얼 이미지를 슬롯 아이템 이미지로 설정
 				dragVisual.SetDragImageFromSprite(slotImage.sprite);
+
+				// 드래그 취소 시 실행할 내용 정의
+				dragDropOperation.onDragCancelled += () =>
+					Debug.Log($"[드래그 취소] 드래그 시작 슬롯 인덱스 : {_ItemSlotIndex}");
+
+				// 드래그 성공 시 실행할 내용 정의
+				dragDropOperation.onDragCompleted += () =>
+				{
+					// 모든 겹친 UI 에 추가된 컴포넌트를 확인합니다.
+					foreach (var overlappedComponent in dragDropOperation.overlappedComponents)
+					{
+						// 겹친 UI 컴포넌트 중 PlayerInventoryItemSlot 을 얻습니다.
+						PlayerInventoryItemSlot inventoryItemSlot = overlappedComponent as PlayerInventoryItemSlot;
+
+						// PlayerInventoryItemSlot 형태의 컴포넌트를 얻었다면
+						if (inventoryItemSlot != null)
+						{
+							// 아이템 스왑
+							(PlayerManager.Instance.playerController as GamePlayerController).playerInventory.SwapItem(
+								this, inventoryItemSlot);
+						}
+					}
+				};
 			};
 	}
 
@@ -43,5 +67,15 @@ public sealed class PlayerInventoryItemSlot:ItemSlot
 		ItemSlotInfo itemSlotInfo = playerController.playerCharacterInfo.inventoryItemInfos[_ItemSlotIndex];
 
 		SetSlotItemCount(itemSlotInfo.itemCount);
+	}
+
+	// 인벤토리 아이템 슬롯을 갱신합니다.
+	public void UpdateInventoryItemSlot()
+	{
+		// 아이템 이미지 갱신
+		UpdateItemImage();
+
+		// 아이템 개수 텍스트 갱신
+		UpdateItemCountText();
 	}
 }
