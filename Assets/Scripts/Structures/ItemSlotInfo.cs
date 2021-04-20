@@ -33,6 +33,10 @@ public struct ItemSlotInfo
 	// 해당 데이터가 비어있음을 나타냅니다.
 	public bool IsEmpty() => string.IsNullOrEmpty(itemCode);
 
+	// 같은 아이템임을 확인합니다.
+	public bool IsSameItem(ItemSlotInfo itemSlotInfo) => itemCode == itemSlotInfo.itemCode;
+
+
 	// 해당 데이터를 비웁니다.
 	public void Clear()
 	{

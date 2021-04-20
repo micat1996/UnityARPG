@@ -17,6 +17,12 @@ public enum SlotType
 	InventorySlot
 }
 
+// 아이템 구매 / 판매 시 사용되는 열거 형식입니다.
+public enum TradeSeller
+{
+	ShopKeeper,
+	Player
+}
 
 // 아이템 타입을 나타낼 때 사용되는 열거 형식입니다.
 public enum ItemType

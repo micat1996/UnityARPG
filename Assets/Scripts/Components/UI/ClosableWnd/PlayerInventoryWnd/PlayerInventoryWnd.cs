@@ -8,6 +8,9 @@ public sealed class PlayerInventoryWnd:ClosableWnd
 
 	private PlayerInventoryItemSlot _Panel_PlayerInventoryItemSlotPrefab;
 
+	// 아이템 슬롯 위젯들을 저장할 배열
+	List<PlayerInventoryItemSlot> _ItemSlots = new List<PlayerInventoryItemSlot>();
+
 	protected override void Awake()
 	{
 		base.Awake();
@@ -29,6 +32,9 @@ public sealed class PlayerInventoryWnd:ClosableWnd
 		for (int i = 0; i < playerCharacterInfo.inventorySlotCount; ++i)
 		{
 			var newItemSlot = CreateItemSlot();
+
+			_ItemSlots.Add(newItemSlot);
+
 			newItemSlot.InitializeInventoryItemSlot(
 				SlotType.InventorySlot,
 				playerCharacterInfo.inventoryItemInfos[i].itemCode,
@@ -44,6 +50,27 @@ public sealed class PlayerInventoryWnd:ClosableWnd
 	private PlayerInventoryItemSlot CreateItemSlot() =>
 		Instantiate(_Panel_PlayerInventoryItemSlotPrefab, _Panel_ItemSlots);
 
+	public void UpdateInventoryItemSlots()
+	{
+		// GamePlayerController
+		GamePlayerController gamePlayerController = (PlayerManager.Instance.playerController as GamePlayerController);
+
+		// 플레이어 캐릭터 정보를 얻습니다.
+		ref PlayerCharacterInfo playerInfo = ref gamePlayerController.playerCharacterInfo;
+
+		List<ItemSlotInfo> inventoryItemInfos = playerInfo.inventoryItemInfos;
+
+		for (int i = 0; i < _ItemSlots.Count; ++i)
+		{
+			_ItemSlots[i].SetItemInfo(inventoryItemInfos[_ItemSlots[i].itemSlotIndex].itemCode);
+
+			_ItemSlots[i].UpdateInventoryItemSlot();
+
+			_ItemSlots[i].InitializeInventoryItemSlot(
+				SlotType.InventorySlot,
+				playerInfo.inventoryItemInfos[i].itemCode, i);
+		}
+	}
 
 
 }
